@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:customtabs:26.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/542540164d3c67f03e28e4c73a0f2bfd/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/542540164d3c67f03e28e4c73a0f2bfd/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6468bb06990cd560eda5e6a16f5f1055/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/75cc3670a5b438483179dfae8c76ae0e/customtabs-26.1.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/75cc3670a5b438483179dfae8c76ae0e/customtabs-26.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/75cc3670a5b438483179dfae8c76ae0e/customtabs-26.1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/customtabs/26.1.0/fc3c2c5fd86e4c7bced338c640762c0a9a7ac1e/customtabs-26.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

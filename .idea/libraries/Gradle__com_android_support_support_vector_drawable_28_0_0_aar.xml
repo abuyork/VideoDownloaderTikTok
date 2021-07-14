@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:support-vector-drawable:28.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/91fe475ec580c2b7723e0f5ae24fd098/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/91fe475ec580c2b7723e0f5ae24fd098/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/baa9f658e0ee46039d8fa22843ee889c/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/307da738ce1770e814891311fbe0ee33/support-vector-drawable-28.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/307da738ce1770e814891311fbe0ee33/support-vector-drawable-28.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/307da738ce1770e814891311fbe0ee33/support-vector-drawable-28.0.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

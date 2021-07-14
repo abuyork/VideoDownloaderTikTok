@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@drawable/background_tiles" android:layout_width="fill_parent" android:layout_height="fill_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@+id/clMain" android:paddingBottom="16.0dip" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/llTips" android:background="@drawable/tips_background" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip">
+            <ImageView android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:src="@drawable/ic_idea" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15.0sp" android:textColor="@color/colorTips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="How to download videos?" />
+                <TextView android:textSize="13.0sp" android:textColor="@color/colorTips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="•   Share the video to Video Downloader app (or)" />
+                <TextView android:textSize="13.0sp" android:textColor="@color/colorTips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="•   Simply copy the link of any video" />
+                <TextView android:textSize="13.0sp" android:textColor="@color/colorTips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="•   Make sure 'Auto Download Service' is running" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llSearch" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+            <android.support.v7.widget.CardView android:layout_gravity="center" android:id="@+id/card_view" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="10.0dip" card_view:cardCornerRadius="10.0dip" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorAccent"
+                            android:id="@+id/purl">
+                            <ImageView
+                                android:id="@+id/ivLink"
+                                android:padding="12.0dip"
+                                android:focusable="true"
+                                android:clickable="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3.0dip"
+                                android:src="@drawable/ic_link_24dp"
+                                android:layout_centerVertical="true" />
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_toRightOf="@+id/purl"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/vurl">
+
+                            <EditText
+                                android:textColor="@color/colorDefaultDark"
+                                android:gravity="center"
+                                android:id="@+id/etURL"
+                                android:background="@android:color/transparent"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:hint="Video URL here..."
+                                android:singleLine="true"
+                                android:layout_toLeftOf="@+id/ivHelp"
+                                android:layout_toRightOf="@+id/ivLink"
+                                android:layout_centerVertical="true"
+                                android:inputType="textUri"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"/>
+
+                        </LinearLayout>
+
+
+
+                        <ImageView
+                            android:id="@+id/ivHelp"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:padding="12.0dip"
+                            android:focusable="true"
+                            android:visibility="gone"
+                            android:clickable="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3.0dip"
+                            android:src="@drawable/ic_info_outline_24dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ProgressBar android:id="@+id/pbFetchingVideo" android:visibility="gone" android:layout_width="20.0dip" android:layout_height="20.0dip" />
+                    <Button android:id="@+id/btnDownload" android:visibility="visible" android:layout_width="150.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="20.0dip" android:text="Download" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" style="@style/Widget.AppCompat.Button.Colored" />
+                </LinearLayout>
+                <android.support.v7.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="15.0dip">
+                    <LinearLayout android:orientation="vertical" android:background="@android:color/white" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Options" />
+                        <RelativeLayout android:gravity="center_vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@+id/ic_info_include_watermark" android:background="?selectableItemBackgroundBorderless" android:padding="16.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_no_watermark_24dp" android:layout_alignParentLeft="true" />
+                            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/ic_info_include_watermark" android:layout_centerVertical="true" android:layout_toEndOf="@+id/ic_info_include_watermark">
+                                <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:id="@+id/tvNoWatermark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="No Watermark" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Remove watermark from downloaded video" />
+                            </LinearLayout>
+                            <CheckBox android:id="@+id/chkWatermark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                        <View android:background="#ffe4e4e4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginLeft="56.0dip" />
+                        <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip">
+                            <ImageView android:id="@+id/ic_info_auto_download" android:background="?selectableItemBackgroundBorderless" android:padding="16.0dip" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_download_24dp" android:layout_alignParentLeft="true" />
+                            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/ic_info_auto_download" android:layout_centerVertical="true" android:layout_toEndOf="@+id/ic_info_auto_download">
+                                <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="Auto Download" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Simply copy the link of video to start download" />
+                            </LinearLayout>
+                            <CheckBox android:id="@+id/chkAutoDownload" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingBottom="50.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <android.support.v7.widget.CardView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip">
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="40.0dip" android:paddingTop="16.0dip" android:paddingRight="40.0dip" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView android:textStyle="bold" android:textColor="@android:color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Currently Supports" />
+                            <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llTikTok" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                    <ImageView android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@mipmap/ic_tiktok" />
+                                    <TextView android:textSize="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="TikTok" />
+                                </LinearLayout>
+                                <View android:layout_width="20.0dip" android:layout_height="wrap_content" />
+                                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llFacebook" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                    <ImageView android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@mipmap/ic_facebook" />
+                                    <TextView android:textSize="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="Facebook" />
+                                </LinearLayout>
+                                <View android:layout_width="20.0dip" android:layout_height="wrap_content" />
+                                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llInstagram" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                    <ImageView android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@mipmap/ic_instagram" />
+                                    <TextView android:textSize="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="Instagram" />
+                                </LinearLayout>
+                                <View android:visibility="gone" android:layout_width="20.0dip" android:layout_height="wrap_content" />
+                                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llYouTube" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                    <ImageView android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@mipmap/ic_youtube" />
+                                    <TextView android:textSize="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="YouTube" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <View android:background="#ffd6d6d6" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="15.0dip" />
+                            <TextView android:textSize="11.0sp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/str_developed_with_love" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/llMessage" android:background="@drawable/toast_danger" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip">
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffa94442" android:id="@+id/tvMessageTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Message Title" />
+                    <TextView android:textColor="#ffa94442" android:id="@+id/tvMessageContent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Message Content" />
+                </LinearLayout>
+                <LinearLayout android:background="@drawable/tips_background" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="16.0dip">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/ic_idea" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="15.0sp" android:textColor="@color/colorTips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Auto Download not working?" />
+                        <TextView android:textSize="13.0sp" android:textColor="@color/colorTips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="•   Make sure app is running in background" />
+                        <TextView android:textSize="13.0sp" android:textColor="@color/colorTips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="•   Restart the app if that doesn't work" />
+                        <TextView android:textSize="13.0sp" android:textColor="@color/colorTips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="•   Contact developer before leaving a negative review" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <android.support.v7.widget.CardView android:layout_gravity="center" android:id="@+id/cvDownload" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" android:animateLayoutChanges="true" card_view:cardCornerRadius="4.0dip" xmlns:card_view="http://schemas.android.com/apk/res-auto">
+            <LinearLayout android:orientation="vertical" android:id="@+id/llDownload" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/imgAvatar" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/background_tiles" card_view:civ_border_color="#ffd2d2d2" card_view:civ_border_width="1.0dip" />
+                    <TextView android:textSize="16.0sp" android:textColor="@android:color/background_dark" android:id="@+id/tvAuthor" android:paddingLeft="10.0dip" android:paddingTop="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Author" android:layout_toRightOf="@+id/imgAvatar" />
+                    <ImageView android:id="@+id/imgClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_close_24dp" android:layout_alignParentRight="true" />
+                    <RelativeLayout android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@+id/imgAvatar" android:layout_below="@+id/tvAuthor">
+                        <ImageView android:id="@+id/ivMusicNote" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/ic_music_note_24dp" android:layout_centerVertical="true" />
+                        <TextView android:textSize="12.0sp" android:id="@+id/tvMusic" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Music - Author" android:layout_toRightOf="@+id/ivMusicNote" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView android:id="@+id/tvDesc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="Description Goes Here" />
+                <LinearLayout android:orientation="vertical" android:id="@+id/llDownloadPercentage" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ProgressBar android:id="@+id/progressBar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:max="100" style="?android:progressBarStyleHorizontal" />
+                    <TextView android:textColor="@color/colorAccent" android:gravity="center" android:id="@+id/tvDownloadPercentage" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="Starting download..." />
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center" android:id="@+id/llDownloadCompleted" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="10.0dip">
+                    <Button android:id="@+id/btnWatch" android:layout_width="130.0dip" android:layout_height="50.0dip" android:text="WATCH" style="@style/Widget.AppCompat.Button.Colored" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</ScrollView>

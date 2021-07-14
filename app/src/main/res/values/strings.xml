@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Video Downloader</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="str_developed_with_love">Developed with ❤ in <b>Uzbekistan</b></string>
+
+    <string name="channel_name">test Channel</string>
+    <string name="channel_description">test channel_description</string>
+    <string name="info_permission_denied">Sorry permission denied.We can not open this app on your device, please try again later.</string>
+    <string name="format_request_permision">%1$s will need to have read/write permission your sdcard to save Files.Do you want to grant it?</string>
+
+    <string name="AdmobBanner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="AdmobInterstitial">ca-app-pub-3940256099942544/1033173712</string>
+
+
+    <string name="SharingVideoSubject">Sharing Downloaded Video</string>
+    <string name="SharingVideoTitle">Sharing Video</string>
+    <string name="SharingVideoBody">Sharing Video File</string>
+
+    <string name="RateAppTitle">Like this app?</string>
+    <string name="RateApp">Share the love by rating 5 stars in Play Store. 😘</string>
+</resources>
