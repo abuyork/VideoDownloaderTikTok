@@ -21,4 +21,7 @@
 
     <string name="RateAppTitle">Like this app?</string>
     <string name="RateApp">Share the love by rating 5 stars in Play Store. 😘</string>
+    <string name="link">
+        <a href="http://myurls.co/abuyork">Created By Abdugani</a>
+    </string>
 </resources>

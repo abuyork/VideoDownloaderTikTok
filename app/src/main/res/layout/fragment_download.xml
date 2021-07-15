@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:background="@drawable/background_tiles" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_tiles" android:layout_width="fill_parent" android:layout_height="fill_parent"
             xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout android:orientation="vertical" android:id="@+id/clMain" android:paddingBottom="16.0dip" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
         <LinearLayout android:id="@+id/llTips" android:background="@drawable/tips_background" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip">
@@ -134,6 +135,10 @@
                             <TextView android:textSize="11.0sp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/str_developed_with_love" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Created By Ali"/>
                 </LinearLayout>
                 <LinearLayout android:orientation="vertical" android:id="@+id/llMessage" android:background="@drawable/toast_danger" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip">
                     <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="#ffa94442" android:id="@+id/tvMessageTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="Message Title" />
